@@ -187,5 +187,10 @@ export const siteConfig = {
         },
       ],
     },
+    {
+      category: "Beyond Coding",
+      intro: "I spend my time:",
+      items: ["Playing Badminton", "Practicing yoga", "Volunteering"],
+    },
   ],
 };
