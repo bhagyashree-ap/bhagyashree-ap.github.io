@@ -1,0 +1,529 @@
+---
+import { siteConfig } from "../config";
+---
+
+<div
+  id="hero"
+  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
+  <!-- Layered background -->
+  <div
+    class="absolute inset-0 -z-10"
+    style={`background:
+      radial-gradient(circle at 12% 12%, ${siteConfig.accentColor}30 0%, ${siteConfig.accentColor}14 28%, transparent 58%),
+      radial-gradient(circle at 88% 22%, #0ea5e920 0%, #0ea5e910 34%, transparent 56%),
+      linear-gradient(120deg, #ffffff 0%, #f8fbff 42%, #f3f7ff 100%)`}
+  >
+  </div>
+  <div
+    class="absolute -top-20 -left-16 h-72 w-72 rounded-full blur-3xl -z-10 animate-float"
+    style={`background: ${siteConfig.accentColor}26`}
+  />
+  <div
+    class="absolute -bottom-20 right-0 h-80 w-80 rounded-full blur-3xl -z-10 animate-float-delayed"
+    style="background: rgba(14, 165, 233, 0.18)"
+  />
+  <svg
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+  >
+    <defs>
+      <pattern
+        x="50%"
+        y={-1}
+        id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
+        width={200}
+        height={200}
+        patternUnits="userSpaceOnUse"
+      >
+        <path d="M.5 200V.5H200" fill="none"></path>
+      </pattern>
+      <pattern
+        id="programming-symbols"
+        x="0"
+        y="0"
+        width="400"
+        height="400"
+        patternUnits="userSpaceOnUse"
+      >
+        <text
+          x="50"
+          y="50"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="22"
+          transform="rotate(-15)">&lt;/&gt;</text
+        >
+        <text
+          x="150"
+          y="100"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="20"
+          transform="rotate(10)">{ }</text
+        >
+        <text
+          x="250"
+          y="80"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="18"
+          transform="rotate(-5)">[ ]</text
+        >
+        <text
+          x="100"
+          y="200"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="22"
+          transform="rotate(15)">&lt;/&gt;</text
+        >
+        <text
+          x="300"
+          y="180"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="20"
+          transform="rotate(-10)">::</text
+        >
+        <text
+          x="200"
+          y="250"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="24"
+          transform="rotate(5)">f(x)</text
+        >
+        <text
+          x="50"
+          y="320"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="18"
+          transform="rotate(-8)">0 1 0 1</text
+        >
+        <text
+          x="350"
+          y="300"
+          fill="#4b5563"
+          font-family="monospace"
+          font-size="22"
+          transform="rotate(12)">[AI]</text
+        >
+      </pattern>
+    </defs>
+    <rect
+      fill="url(#programming-symbols)"
+      width="100%"
+      height="100%"
+      opacity="0.24"></rect>
+    <rect
+      fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+      width="100%"
+      height="100%"
+      stroke-width={0}></rect>
+  </svg>
+  <div class="relative z-20 h-full mx-auto max-w-7xl p-8 sm:p-12 md:p-24 flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start lg:items-center w-full">
+      <div class="lg:col-span-5 justify-self-center lg:justify-self-center mt-4 sm:mt-6 lg:mt-8 animate-fade-in animation-delay-400 lg:order-1">
+        <div class="photo-flip relative">
+          <div class="absolute inset-0 rounded-[50%] blur-2xl bg-[#f3f7ff] scale-95 -z-10" />
+          <button
+            type="button"
+            class="photo-flip-trigger"
+            aria-label="Flip profile photo"
+          >
+            <span class="photo-flip-inner">
+              <span class="photo-face photo-face-front">
+                <img
+                  src="/Bhagyashree.png"
+                  alt="Bhagyashree Patil"
+                  class="w-56 h-64 sm:w-64 sm:h-72 lg:w-72 lg:h-90 object-cover object-[center_20%] rounded-[50%] border-4 border-white shadow-[0_10px_28px_rgba(15,23,42,0.14)]"
+                  loading="eager"
+                />
+              </span>
+              <span class="photo-face photo-face-back">
+                <video
+                  class="avatar-video w-80 h-80 sm:w-64 sm:h-72 lg:w-72 lg:h-100 object-cover object-[center_34%] rounded-[50%] border-4 border-white shadow-[0_10px_28px_rgba(15,23,42,0.14)]"
+                  src="/Avatar.mov"
+                  poster="/neural.png"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  aria-label="Bhagyashree avatar animation"
+                />
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 lg:order-2">
+        <h2
+          class="inline-flex items-center rounded-full border border-gray-300/70 bg-white/70 px-4 py-2 text-pretty text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-gray-700 backdrop-blur-sm animate-fade-in"
+        >
+          Hello! 👋
+        </h2>
+        <h1
+          class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
+        >
+          I'm <span style={{ color: siteConfig.accentColor }}
+            >{siteConfig.name}</span
+          >
+        </h1>
+        <p
+          class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
+        >
+          {siteConfig.title}
+        </p>
+        <div class="mt-5 sm:mt-6 inline-flex flex-col items-start gap-2 animate-fade-in animation-delay-600">
+          <button
+            type="button"
+            class="name-audio-btn inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white/85 px-4 py-2 text-sm sm:text-base font-medium text-gray-700 shadow-sm transition-all duration-200 hover:border-gray-400 hover:bg-white"
+            data-name-audio-btn
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4 sm:h-5 sm:w-5"
+            >
+              <path d="M11 5L6 9H3v6h3l5 4V5z" />
+              <path d="M15.5 8.5a5 5 0 010 7" />
+              <path d="M18.5 6a8.5 8.5 0 010 12" />
+            </svg>
+            Hear my name
+          </button>
+          <audio src="/BP.m4a" preload="auto" data-name-audio />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute bottom-0 left-0 right-0 z-10 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
+  >
+    {
+      siteConfig.social?.email && (
+        <a
+          href={`mailto:${siteConfig.social.email}`}
+          aria-label="Email"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.linkedin && (
+        <a
+          href={siteConfig.social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 11v5" />
+              <path d="M8 8v.01" />
+              <path d="M12 16v-5" />
+              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.googlescholar && (
+        <a
+          href={siteConfig.social.googlescholar}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+            <path d="M5 13v4c0 1.66 3.13 3 7 3s7-1.34 7-3v-4l-7 3-7-3z" />
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.twitter && (
+        <a
+          href={siteConfig.social.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.github && (
+        <a
+          href={siteConfig.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+  </div>
+</div>
+
+<script>
+  const syncAvatarVideo = (container) => {
+    const video = container.querySelector(".avatar-video");
+    if (!video) return;
+
+    const shouldPlay = container.classList.contains("is-flipped");
+    if (shouldPlay) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
+
+  document.querySelectorAll(".photo-flip-trigger").forEach((button) => {
+    const container = button.closest(".photo-flip");
+    if (!container) return;
+
+    container.addEventListener("mouseenter", () => {
+      const video = container.querySelector(".avatar-video");
+      video?.play().catch(() => {});
+    });
+
+    container.addEventListener("mouseleave", () => {
+      const video = container.querySelector(".avatar-video");
+      if (!container.classList.contains("is-flipped")) {
+        video?.pause();
+        if (video) video.currentTime = 0;
+      }
+    });
+
+    button.addEventListener("click", () => {
+      container.classList.toggle("is-flipped");
+      syncAvatarVideo(container);
+    });
+  });
+
+  const nameAudioButton = document.querySelector("[data-name-audio-btn]");
+  const pronunciationStatus = document.querySelector("[data-pronounce-status]");
+  const nameAudio = document.querySelector("[data-name-audio]");
+
+  if (nameAudioButton && nameAudio instanceof HTMLMediaElement) {
+    nameAudio.addEventListener("play", () => {
+      nameAudioButton.classList.add("is-speaking");
+      if (pronunciationStatus) {
+        pronunciationStatus.textContent = "Playing pronunciation...";
+      }
+    });
+
+    nameAudio.addEventListener("ended", () => {
+      nameAudioButton.classList.remove("is-speaking");
+      if (pronunciationStatus) {
+        pronunciationStatus.textContent = "Tap again to replay.";
+      }
+    });
+
+    nameAudio.addEventListener("error", () => {
+      nameAudioButton.classList.remove("is-speaking");
+      if (pronunciationStatus) {
+        pronunciationStatus.textContent = "Could not play pronunciation.";
+      }
+    });
+
+    nameAudioButton.addEventListener("click", () => {
+      if (!nameAudio.paused) {
+        nameAudio.pause();
+        nameAudio.currentTime = 0;
+        nameAudioButton.classList.remove("is-speaking");
+        if (pronunciationStatus) {
+          pronunciationStatus.textContent = "Tap again to replay.";
+        }
+        return;
+      }
+
+      nameAudio.currentTime = 0;
+      nameAudio.play().catch(() => {
+        nameAudio.load();
+        nameAudio.play().catch(() => {
+          nameAudioButton.classList.remove("is-speaking");
+          if (pronunciationStatus) {
+            pronunciationStatus.textContent = "Could not play pronunciation.";
+          }
+        });
+      });
+    });
+
+    nameAudio.load();
+  }
+</script>
+
+<style>
+  .photo-flip-trigger {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    perspective: 1200px;
+    cursor: pointer;
+  }
+
+  .photo-flip-inner {
+    position: relative;
+    display: block;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+  }
+
+  .photo-face {
+    display: block;
+    backface-visibility: hidden;
+  }
+
+  .photo-face-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+  }
+
+  .photo-flip.is-flipped .photo-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  @media (hover: hover) {
+    .photo-flip:hover .photo-flip-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-14px) translateX(8px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  .animate-float {
+    animation: float 10s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: float 12s ease-in-out infinite;
+    animation-delay: 1.6s;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .name-audio-btn.is-speaking {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 18%, white);
+    color: var(--accent-color);
+  }
+</style>
