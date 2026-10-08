@@ -1,3 +1,3 @@
-# My website
+# My Portfolio Website
 
-This is the repository for my personal website!
+This is my personal portfolio website!
