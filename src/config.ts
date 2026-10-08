@@ -69,13 +69,6 @@ export const siteConfig = {
       link: "https://github.com/bhagyashree-ap",
       skills: ["HTML", "PHP", "CSS", "JavaScript", "MySQL"],
     },
-    {
-      name: "Cloud Computing Project - Gaming Website Deployment on Google Cloud",
-      description:
-        "Deployed a gaming website on Google Cloud Platform to improve scalability and accessibility, reducing load times by 5%.",
-      link: "https://github.com/bhagyashree-ap",
-      skills: ["Cloud Computing", "GCP", "Deployment", "Performance Optimization"],
-    },
   ],
   experience: [
     {
