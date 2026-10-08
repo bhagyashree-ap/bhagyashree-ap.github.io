@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Bhagyashree Patil",
-  title: "Machine Learning Engineer | SWE | Data Scientist",
+  title: "Software Engineer | Machine Learning Engineer",
   description: "Portfolio website of Bhagyashree Patil",
   accentColor: "#1d4ed8",
   social: {

@@ -111,37 +111,12 @@ import { siteConfig } from "../config";
   <div class="relative z-20 h-full mx-auto max-w-7xl px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-12 flex items-center">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-start lg:items-center w-full">
       <div class="lg:col-span-5 justify-self-center lg:justify-self-center mt-2 sm:mt-4 lg:mt-6 animate-fade-in animation-delay-400 lg:order-1">
-        <div class="photo-flip relative">
-          <div class="absolute inset-0 rounded-[50%] blur-2xl bg-[#f3f1e9] scale-95 -z-10" />
-          <button
-            type="button"
-            class="photo-flip-trigger"
-            aria-label="Flip profile photo"
-          >
-            <span class="photo-flip-inner">
-              <span class="photo-face photo-face-front">
-                <img
-                  src="/Bhagyashree.png"
-                  alt="Bhagyashree Patil"
-                  class="w-48 h-56 sm:w-56 sm:h-64 lg:w-64 lg:h-80 object-cover object-[center_20%] rounded-[50%] border-4 border-white shadow-[0_10px_28px_rgba(15,23,42,0.14)]"
-                  loading="eager"
-                />
-              </span>
-              <span class="photo-face photo-face-back">
-                <video
-                  class="avatar-video w-48 h-56 sm:w-56 sm:h-64 lg:w-64 lg:h-80 object-cover object-[center_34%] rounded-[50%] border-4 border-white shadow-[0_10px_28px_rgba(15,23,42,0.14)]"
-                  src="/Avatar.mov"
-                  poster="/neural.png"
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  aria-label="Bhagyashree avatar animation"
-                />
-              </span>
-            </span>
-          </button>
-        </div>
+        <img
+          src="/Bhagyashree.png"
+          alt="Bhagyashree Patil"
+          class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-2xl border-4 border-white shadow-[0_10px_28px_rgba(15,23,42,0.14)]"
+          loading="eager"
+        />
       </div>
 
       <div class="lg:col-span-7 lg:order-2">
@@ -308,82 +283,7 @@ import { siteConfig } from "../config";
   </div>
 </div>
 
-<script>
-  const syncAvatarVideo = (container) => {
-    const video = container.querySelector(".avatar-video");
-    if (!video) return;
-
-    const shouldPlay = container.classList.contains("is-flipped");
-    if (shouldPlay) {
-      video.play().catch(() => {});
-    } else {
-      video.pause();
-      video.currentTime = 0;
-    }
-  };
-
-  document.querySelectorAll(".photo-flip-trigger").forEach((button) => {
-    const container = button.closest(".photo-flip");
-    if (!container) return;
-
-    container.addEventListener("mouseenter", () => {
-      const video = container.querySelector(".avatar-video");
-      video?.play().catch(() => {});
-    });
-
-    container.addEventListener("mouseleave", () => {
-      const video = container.querySelector(".avatar-video");
-      if (!container.classList.contains("is-flipped")) {
-        video?.pause();
-        if (video) video.currentTime = 0;
-      }
-    });
-
-    button.addEventListener("click", () => {
-      container.classList.toggle("is-flipped");
-      syncAvatarVideo(container);
-    });
-  });
-
-</script>
-
 <style>
-  .photo-flip-trigger {
-    border: 0;
-    padding: 0;
-    background: transparent;
-    perspective: 1200px;
-    cursor: pointer;
-  }
-
-  .photo-flip-inner {
-    position: relative;
-    display: block;
-    transform-style: preserve-3d;
-    transition: transform 0.7s ease;
-  }
-
-  .photo-face {
-    display: block;
-    backface-visibility: hidden;
-  }
-
-  .photo-face-back {
-    position: absolute;
-    inset: 0;
-    transform: rotateY(180deg);
-  }
-
-  .photo-flip.is-flipped .photo-flip-inner {
-    transform: rotateY(180deg);
-  }
-
-  @media (hover: hover) {
-    .photo-flip:hover .photo-flip-inner {
-      transform: rotateY(180deg);
-    }
-  }
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -394,28 +294,10 @@ import { siteConfig } from "../config";
       transform: translateY(0);
     }
   }
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    50% {
-      transform: translateY(-14px) translateX(8px);
-    }
-  }
-
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
   }
-  .animate-float {
-    animation: float 10s ease-in-out infinite;
-  }
-  .animate-float-delayed {
-    animation: float 12s ease-in-out infinite;
-    animation-delay: 1.6s;
-  }
-
   .animation-delay-200 {
     animation-delay: 0.2s;
   }
