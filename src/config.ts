@@ -82,8 +82,8 @@ export const siteConfig = {
       company: "New York University",
       title: "AI Research Intern",
       dateRange: "May 2026 - Present",
-      link: "https://www.linkedin.com/in/bhagyashree-patil/edit/forms/position/2919751483/",
-      linkLabel: "[LinkedIn]",
+      link: "https://github.com/bhagyashree-ap/OntologyRAG",
+      linkLabel: "[GitHub]",
       bullets: [
         "Built a cross-ontology Career Intelligence GraphRAG platform spanning 325K+ occupational entities across O*NET, ESCO, and SSOC by transforming raw CSV and Excel sources into source-preserving OWL and Turtle RDF graph structures with entity nodes and typed relationship edges, then importing them into Neo4j.",
         "Improved explainable job, task, skill, and knowledge retrieval by combining 768-dimensional embedding vectors, dataset-specific FAISS IndexFlatIP indexes, cosine-similarity top-k search, and Cypher 1-2 hop graph traversal. Generated grounded LLM answers linked to graph-path evidence and citation IDs.",
@@ -94,8 +94,6 @@ export const siteConfig = {
       company: "New York University",
       title: "Graduate Research Assistant",
       dateRange: "Sep 2025 - Dec 2025",
-      link: "https://www.linkedin.com/in/bhagyashree-patil/edit/forms/position/2919750417/",
-      linkLabel: "[LinkedIn]",
       bullets: [
         "Led development of a multimodal conversational system using Python, PyTorch, and PostgreSQL to recommend personalized study-resource bundles from NYU Library collections across books, articles, lectures, and podcasts, addressing fragmentation reported by 85.7% of surveyed students.",
         "Constructed a heterogeneous knowledge graph linking resources by course, subject, instructor, and semantic similarity; trained a multi-layer GNN in PyTorch to generate node embeddings, indexed them in FAISS, and used them for context-aware retrieval and ranked recommendations.",
