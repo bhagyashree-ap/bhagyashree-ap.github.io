@@ -14,14 +14,26 @@ export const siteConfig = {
   skills: ["Python", "Java", "MySQL", "AWS", "Google Cloud", "Hadoop", "HDFS", "Docker", "Django", "Node.js", "React", "REST APIs", "JavaScript", "TensorFlow", "PyTorch", "Scikit-learn", "Keras", "Pandas", "NumPy", "Git", "GitHub"],
   projects: [
     {
-      name: "Bidding Based Course Registration System",
+      name: "TunnelVision",
+      description:
+        "Engineered a distributed Kafka and PySpark streaming pipeline integrating 121M fare swipe records, 219K hourly weather observations, and 8 GTFS Realtime feeds polled every 30 seconds, performing borough-level geospatial mapping with Shapely. Architected a FastAPI backend with 5 REST endpoints and WebSocket streaming, orchestrating 6 Dockerized services to deliver live transit and weather analytics to a React Leaflet dashboard. Developed and containerized 5 borough-specific Prophet forecasting models trained on 121M ridership records, achieving R² = 0.734 for next-hour ridership prediction.",
+      skills: ["Python", "PySpark", "Kafka", "FastAPI", "PostgreSQL", "Docker", "React"],
+    },
+    {
+      name: "SVG Language Modelling",
+      description:
+        "Engineered a GPT-based language model for generative vector graphics by building a large-scale data preprocessing and tokenization pipeline over 100M+ SVG tokens, including XML validation and normalization of Hugging Face datasets. Conducted scaling-law experiments on GPT Transformers (1M–80M parameters) using Standard Parameterization and µP for learning-rate transfer, achieving 65K+ tokens/sec throughput and reducing training time by 40–60% through GPU-optimized PyTorch training.",
+      skills: ["Python", "PyTorch", "Transformers", "Tokenizers", "GPT Transformer"],
+    },
+    {
+      name: "SmartSeat",
       description:
         "Built an end-to-end auction based Course Registration System in Java with a MySQL backend to streamline course allocation for 4000+ students across 500+ courses. Designed and implemented automated allocation, multi-round auctions, timestamp based tie resolution, and waitlist management, while securing APIs with JWT and optimizing concurrent bidding workflows for real time enrollment updates. This system improved fairness, efficiency and scalability.",
       link: "https://course-bidding-system.vercel.app/",
       skills: ["Java", "MySQL", "JWT", "Backend Systems"],
     },
     {
-      name: "Finance Tracker - ProAudit",
+      name: "ProAudit - Finance Tracker",
       description:
         "Developed a Java desktop finance analytics system to help users manage and understand large scale personal expense data, addressing the challenge of slow, manual tracking of thousands of records. Designed an embedded SQLite database supporting 10k+ expense entries with low latency CRUD operations, CSV import/export and interactive visualizations using JFreeChart. Implemented TF-IDF for expense classification and monthly spend forecasting, enabling data driven insights and an intuitive dashboard that combined backend efficiency with actionable financial analytics for better decision making.",
       link: "https://github.com/bhagyashree-ap/ProAudit",
@@ -35,7 +47,7 @@ export const siteConfig = {
       skills: ["Python", "Flask", "API Integration", "Data Pipelines"],
     },
     {
-      name: "The Hidden Cost of Fast Fashion - Data Analysis",
+      name: "Environmental Analytics Dashboard",
       description:
         "Led an end-to-end information visualization project analyzing the hidden environmental and supply chain costs of fast fashion, addressing the lack of transparent, data driven insights into sustainability metrics. Cleaned and transformed the 'True Cost of Fast Fashion' dataset from Kaggle, engineered comparative features like emissions per garment, production lead times, waste ratios and conducted statistical analysis to uncover cross brand and regional patterns. Designed and developed interactive visual narratives using D3.js, JavaScript, HTML, and CSS, enabling dynamic filtering and drill down exploration to translate complex sustainability data into clear and actionable insights.",
       link: "https://bhagyashree-ap.github.io/information-visualization/",
