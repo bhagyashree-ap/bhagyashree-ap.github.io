@@ -7,23 +7,7 @@ import { siteConfig } from "../config";
   class="relative isolate overflow-hidden bg-white py-14 sm:py-16 md:py-20 lg:min-h-[85vh]"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <!-- Layered background -->
-  <div
-    class="absolute inset-0 -z-10"
-    style={`background:
-      radial-gradient(circle at 12% 12%, #a3b18a30 0%, #a3b18a14 28%, transparent 58%),
-      radial-gradient(circle at 88% 22%, #d4a37324 0%, #d4a37310 34%, transparent 56%),
-      linear-gradient(120deg, #faf8f2 0%, #f5f3eb 48%, #eef0e7 100%)`}
-  >
-  </div>
-  <div
-    class="absolute -top-20 -left-16 h-72 w-72 rounded-full blur-3xl -z-10 animate-float"
-    style="background: rgba(163, 177, 138, 0.24)"
-  />
-  <div
-    class="absolute -bottom-20 right-0 h-80 w-80 rounded-full blur-3xl -z-10 animate-float-delayed"
-    style="background: rgba(212, 163, 115, 0.2)"
-  />
+  <div class="absolute inset-0 -z-10 bg-[#fcfbf7]" />
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -128,7 +112,7 @@ import { siteConfig } from "../config";
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-start lg:items-center w-full">
       <div class="lg:col-span-5 justify-self-center lg:justify-self-center mt-2 sm:mt-4 lg:mt-6 animate-fade-in animation-delay-400 lg:order-1">
         <div class="photo-flip relative">
-          <div class="absolute inset-0 rounded-[50%] blur-2xl bg-[#e8eadf] scale-95 -z-10" />
+          <div class="absolute inset-0 rounded-[50%] blur-2xl bg-[#f3f1e9] scale-95 -z-10" />
           <button
             type="button"
             class="photo-flip-trigger"
